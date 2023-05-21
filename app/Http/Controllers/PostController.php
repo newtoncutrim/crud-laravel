@@ -27,6 +27,7 @@ class PostController extends Controller
 
     public function listAll(Request $request, Post $post){
         return $post->all();
+        // ss
     }
 
     public function update(Request $request, Post $post){
