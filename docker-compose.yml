@@ -40,7 +40,7 @@ services:
         volumes:
             - ./.docker/mysql/dbdata:/var/lib/mysql
         ports:
-            - "3388:3306"
+            - "3306:3306"
         networks:
             - laravel
 
@@ -75,4 +75,5 @@ networks:
 # php artisan key:generate
 # docker-compose up -d
 # chmod -R 755 .docker/mysql/dbdata
+#docker-compose exec app php artisan migrate:refresh
 

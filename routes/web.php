@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/criar', [PostController::class, 'create']);
+Route::get('/listone', [PostController::class, 'listOne']);
+
+Route::get('/listall', [PostController::class, 'listAll']);
+
+Route::get('/editar', [PostController::class, 'update']);
+
+Route::get('/apagar', [PostController::class, 'delete']);
