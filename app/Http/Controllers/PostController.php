@@ -26,7 +26,12 @@ class PostController extends Controller
     }
 
     public function listAll(Request $request, Post $post){
-        return $post->all();
+        $data = $post->all();
+        $data->toArray();
+
+        return view('list', compact('data'));
+
+
         // ss
     }
 
