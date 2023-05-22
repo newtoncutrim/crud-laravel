@@ -19,10 +19,10 @@ Route::get('/', function () {
 });
 
 Route::get('/criar', [PostController::class, 'create']);
-Route::get('/listone', [PostController::class, 'listOne']);
+Route::get('/listone', [PostController::class, 'show']);
 
-Route::get('/listall', [PostController::class, 'listAll']);
+Route::get('/listall', [PostController::class, 'store']);
 
 Route::get('/editar', [PostController::class, 'update']);
 
-Route::get('/apagar', [PostController::class, 'delete']);
+Route::get('/apagar', [PostController::class, 'destroy']);
