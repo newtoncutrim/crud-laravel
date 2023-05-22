@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->text('content');
-            $table->string('author');
-            $table->softDeletes();
-            $table->timestamps();
+        Schema::table('products', function(Blueprint $table){
+            $table->integer('quant_min')->default(0)->after('quantity');
         });
     }
 
@@ -26,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::table('products', function(Blueprint $table){
+            $table->dropColumn('quantity');
+        });
     }
 };
