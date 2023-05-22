@@ -42,7 +42,7 @@ class PostController extends Controller
         return $r;
     }
 
-    public function delete(Request $request, Post $post){
+    public function destroy(Request $request, Post $post){
         return $post->where('id','=',2)->delete();
     }
 
