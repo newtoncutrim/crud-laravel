@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('code')->unique();
             $table->integer('quantity')->default(0);
             $table->text('obs')->nullable();
-            $table->integer('qdtmin');
             $table->timestamps();
 
         });
