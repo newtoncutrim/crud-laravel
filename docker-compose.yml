@@ -76,4 +76,5 @@ networks:
 # docker-compose up -d
 # chmod -R 755 .docker/mysql/dbdata
 #docker-compose exec app php artisan migrate:refresh
+#docker-compose exec app php artisan migrate:rollback --step=2
 
